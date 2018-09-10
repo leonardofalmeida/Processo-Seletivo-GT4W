@@ -1,3 +1,7 @@
+body{
+	font-family: Segoe UI;
+}
+
 #titulo-principal{
 	margin: 10px;
 }
@@ -30,4 +34,8 @@
 
 #modal-edit-titulo{
 	background-color: #FFC107;
+}
+
+b, strong{
+	font-weight: 400;
 }

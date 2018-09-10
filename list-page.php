@@ -15,7 +15,7 @@ if (($result) AND ($result->rowCount() != 0) ) {
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header" id="modal-cad-titulo">
-					<h5 class="modal-title" id="modal-title-cad">Informações pessoais</h5>
+					<h5 class="modal-title text-white" id="modal-title-cad">Casdatro</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -35,7 +35,7 @@ if (($result) AND ($result->rowCount() != 0) ) {
 						<div class="control-group <?php echo !empty($cpfError)?'error':'';?>">
 							<div class="form-group">
 								<label for="cpf" class="control-label">CPF</label>
-								<input type="text" name="cpf" class="form-control" id="recipient-cpf" placeholder="Ex: 12345678912" required>
+								<input type="text" name="cpf" class="form-control" id="recipient-cpf" placeholder="Apenas números" maxlength="11" pattern="[0-9]+$" required>
 								<?php if (!empty($cpfError)): ?>
 									<span class="help-inline"><?php echo $cpfError;?></span>
 								<?php endif; ?>
@@ -53,7 +53,7 @@ if (($result) AND ($result->rowCount() != 0) ) {
 						</div>
 
 						<div class="form-group">
-							<label for="estado" class="control-label">UF (Estado)</label>
+							<label for="estado" class="control-label">Estado</label>
 							<select id="recipient-estado-cad" class="form-control" name="estado">
 							</select>
 							<input type="hidden" name="id" id="id">
@@ -113,22 +113,22 @@ if (($result) AND ($result->rowCount() != 0) ) {
 							<div class="modal-dialog modal-dialog-centered" role="document">
 								<div class="modal-content">
 									<div class="modal-header" id="modal-ver-titulo">
-										<h5 class="modal-title" id="exampleModalLongTitle">Informações pessoais</h5>
+										<h5 class="modal-title text-white text-center" id="exampleModalLongTitle">Informações pessoais</h5>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>
 									</div>
 									<div class="modal-body">
-										<h5 class="card-text">Nome:</h5>
-										<p><strong><?php echo $row['nome'];?></strong></p>
-										<h5 class="card-text">CPF:</h5>
-										<p><strong><?php echo $row['cpf'];?></strong></p>
-										<h5 class="card-text">Data Nascimento:</h5>
-										<p><strong><?php echo $row['nascimento'];?></strong></p>
-										<h5 class="card-text">Peso(kg):</h5>
-										<p><strong><?php echo $row['peso'];?></strong></p>
-										<h5 class="card-text">Estado:</h5>
-										<p><strong><?php echo $row['estado'];?></strong></p>
+										<h6 class="card-text"><strong>Nome:</strong></h6>
+										<p><?php echo $row['nome'];?></p>
+										<h6 class="card-text"><strong>CPF:</strong></h6>
+										<p><?php echo $row['cpf'];?></p>
+										<h6 class="card-text"><strong>Data Nascimento:</strong></h6>
+										<p><?php echo $row['nascimento'];?></p>
+										<h6 class="card-text"><strong>Peso(kg):</strong></h6>
+										<p><?php echo $row['peso'];?></p>
+										<h6 class="card-text"><strong>Estado:</strong></h6>
+										<p><?php echo $row['estado'];?></p>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -142,7 +142,7 @@ if (($result) AND ($result->rowCount() != 0) ) {
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
 									<div class="modal-header" id="modal-deletar-titulo">
-										<h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+										<h5 class="modal-title text-white" id="exampleModalLabel">Confirmação</h5>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>
@@ -167,7 +167,7 @@ if (($result) AND ($result->rowCount() != 0) ) {
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header" id="modal-edit-titulo">
-								<h5 class="modal-title" id="exampleModalLabel">Editar Cadastro</h5>
+								<h5 class="modal-title text-white" id="exampleModalLabel">Editar Cadastro</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -180,7 +180,7 @@ if (($result) AND ($result->rowCount() != 0) ) {
 									</div>
 									<div class="form-group">
 										<label for="cpf" class="col-form-label">CPF</label>
-										<input name="cpf" type="text" class="form-control" id="recipient-cpf" required=""></input>
+										<input name="cpf" type="text" class="form-control" id="recipient-cpf" required="" maxlength="11" pattern="[0-9]+$"></input>
 									</div>
 									<div class="form-group">
 										<label for="nascimento" class="col-form-label">Data Nascimento</label>
@@ -224,7 +224,7 @@ else{
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header" id="modal-cad-titulo">
-					<h5 class="modal-title" id="modal-title-cad">Informações pessoais</h5>
+					<h5 class="modal-title text-white" id="modal-title-cad">Cadastro</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -244,7 +244,7 @@ else{
 						<div class="control-group <?php echo !empty($cpfError)?'error':'';?>">
 							<div class="form-group">
 								<label for="cpf" class="control-label">CPF</label>
-								<input type="text" name="cpf" class="form-control" id="recipient-cpf" placeholder="Ex: 12345678912" required>
+								<input type="text" name="cpf" class="form-control" id="recipient-cpf" placeholder="Ex: 12345678912" maxlength="11" pattern="[0-9]+$" required>
 								<?php if (!empty($cpfError)): ?>
 									<span class="help-inline"><?php echo $cpfError;?></span>
 								<?php endif; ?>
@@ -262,7 +262,7 @@ else{
 						</div>
 
 						<div class="form-group">
-							<label for="estado" class="control-label">UF (Estado)</label>
+							<label for="estado" class="control-label">Estado</label>
 							<select id="recipient-estado-cad" class="form-control" name="estado">
 							</select>
 							<input type="hidden" name="id" id="id">
