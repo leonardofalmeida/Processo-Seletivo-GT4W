@@ -1,0 +1,33 @@
+#titulo-principal{
+	margin: 10px;
+}
+
+#btn-create{
+	margin-bottom: 20px;
+
+}
+
+#card-list{
+	box-shadow: 5px 5px 10px grey;
+}
+
+#modal-ver-titulo{
+	background-color: #17A2B8;
+}
+
+.modal{
+	border-radius: 50px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+#modal-deletar-titulo{
+	background-color: red;
+}
+
+#modal-cad-titulo{
+	background-color: #28A745;
+}
+
+#modal-edit-titulo{
+	background-color: #FFC107;
+}
